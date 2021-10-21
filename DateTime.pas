@@ -23,7 +23,15 @@ begin
     Result := 365;
 end;
 
-function DaysInYearRange(a, b: integer);
+function DaysInYear(a:integer): integer;
+begin
+  if IsLeapYear(a) then
+    Result := 366
+  else
+    Result := 365;
+end;
+
+function DaysInYearRange(a, b: integer): integer;
 begin
   var sum := 0;
   
@@ -32,6 +40,8 @@ begin
   
   Result := sum;
 end;
+
+function SecondsInHours(n: integer) := n * 3600;
 
 begin
   
