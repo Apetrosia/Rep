@@ -43,6 +43,8 @@ end;
 
 function SecondsInHours(n: integer) := n * 3600;
 
+function IsYearOfApocalypse(a: integer) := (a = 1992) or (a = 2005) or (a = 2011);
+
 begin
   
 end.
